@@ -1,73 +1,89 @@
-🧮 Math Adventures — Adaptive Learning Prototype
-📌 Overview
+# 🧮 Math Adventures  
+### Adaptive Learning — AI-Inspired Prototype
 
-This project is a minimal adaptive math learning system designed for children aged 5–10.
-The system dynamically adjusts the difficulty of math puzzles based on the learner’s accuracy and response time, keeping them in an optimal challenge zone.
+---
 
-The focus of this prototype is on adaptive logic and reasoning, not UI or visuals.
+## 📌 Project Overview
 
-🎯 Objective
+**Math Adventures** is a minimal **adaptive math learning system** designed for children aged **5–10**.  
+The system dynamically adjusts the difficulty of math questions based on the learner’s **accuracy** and **response time**, helping maintain an optimal learning challenge.
 
-To demonstrate how AI-inspired adaptive logic can personalize learning difficulty in real time using:
+This prototype focuses on **adaptive logic and reasoning**, rather than UI or visual design.
 
-Performance tracking
+---
 
-Rule-based decision making
+## 🎯 Objective
 
-Session-level analytics
+To demonstrate how **AI-inspired adaptive systems** can personalize learning difficulty in real time using:
 
-🧠 How the System Works
-1️⃣ Puzzle Generation
+- Performance tracking  
+- Rule-based decision logic  
+- Session-level analytics  
 
-Generates math problems based on difficulty:
+---
 
-Easy → Small numbers, addition/subtraction (no negative results)
+## 🧠 System Workflow
 
-Medium → Larger numbers, includes multiplication
+1. User enters name and starts with an initial difficulty (Easy).
+2. The system generates a math puzzle.
+3. User attempts the question.
+4. System records:
+   - Correctness
+   - Time taken
+5. Adaptive engine decides the next difficulty.
+6. After the session, a performance summary is displayed.
 
-Hard → Multiplication and division
+---
 
-2️⃣ Performance Tracking
+## ⚙️ Core Components
 
-For every question, the system logs:
+| Component | Description |
+|--------|-------------|
+| Puzzle Generator | Creates math questions based on difficulty level |
+| Performance Tracker | Records correctness and response time |
+| Adaptive Engine | Adjusts difficulty dynamically |
+| Progress Summary | Displays session analytics |
 
-Correct / Incorrect response
+---
 
-Time taken to answer
+## 📊 Adaptive Logic (Key Highlight)
 
-3️⃣ Adaptive Engine (Core Logic)
+The system uses a **rolling window of the last 3 questions**:
 
-Uses a rolling window of the last 3 questions
+- ⬆️ **Increase difficulty**  
+  - Accuracy ≥ 80%  
+  - Average response time is fast  
 
-Difficulty adjustment rules:
+- ⬇️ **Decrease difficulty**  
+  - Accuracy ≤ 40%  
+  - Response time is slow  
 
-Increase difficulty if accuracy ≥ 80% and average time is fast
+- ➖ **Maintain difficulty** otherwise  
 
-Decrease difficulty if accuracy ≤ 40% or response time is slow
+This approach:
+- Handles noisy or inconsistent answers  
+- Prevents abrupt difficulty changes  
+- Is suitable for young learners  
 
-Otherwise, maintain current difficulty
+---
 
-This prevents sudden jumps and handles noisy user behavior.
+## 🧩 Difficulty Levels
 
-4️⃣ Session Summary
+| Level | Characteristics |
+|----|----------------|
+| Easy | Small numbers, addition & subtraction (no negative results) |
+| Medium | Larger numbers, includes multiplication |
+| Hard | Multiplication and division |
 
-At the end of the session, the system displays:
+---
 
-Overall accuracy
+## 🛠️ Tech Stack
 
-Average response time
+- **Language:** Python  
+- **Interface:** Command Line (Console)  
+- **Libraries:** Standard Python libraries only  
 
-Recommended difficulty level for the next session
+---
 
-
-
-User
- ↓
-Puzzle Generator → Performance Tracker
- ↓
-Adaptive Engine (Rule-Based)
- ↓
-Next Difficulty Selection
- ↓
-Session Summary
+## 📂 Repository Structure
 
