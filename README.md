@@ -58,3 +58,16 @@ Overall accuracy
 Average response time
 
 Recommended difficulty level for the next session
+
+
+
+User
+ ↓
+Puzzle Generator → Performance Tracker
+ ↓
+Adaptive Engine (Rule-Based)
+ ↓
+Next Difficulty Selection
+ ↓
+Session Summary
+
